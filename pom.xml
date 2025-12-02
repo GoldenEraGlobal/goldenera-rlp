@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
 
     <groupId>global.goldenera.rlp</groupId>
     <artifactId>goldenera-rlp</artifactId>
-    <version>1.0</version>
+    <version>0.0.1</version>
     <name>GoldenEraRLP</name>
 
 
@@ -22,6 +23,38 @@
         <commons-lang3.version>3.19.0</commons-lang3.version>
     </properties>
 
+    <organization>
+        <name>GoldenEraGlobal</name>
+        <url>https://goldenera.global</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/GoldenEraGlobal/goldenera-rlp</url>
+        </repository>
+    </distributionManagement>
+
+    <scm>
+        <tag>master</tag>
+        <url>git@github.com:GoldenEraGlobal/goldenera-rlp.git</url>
+        <connection>scm:git:git@github.com:GoldenEraGlobal/goldenera-rlp.git</connection>
+        <developerConnection>scm:git:git@github.com:GoldenEraGlobal/goldenera-rlp.git</developerConnection>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/GoldenEraGlobal/goldenera-rlp/issues</url>
+    </issueManagement>
 
     <dependencies>
         <dependency>
@@ -57,12 +90,10 @@
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                     <compilerArgs>
-                        <arg>-parameters</arg>                        <!-- This compiler plugin configuration ensures that method parameter names are retained -->
+                        <arg>-parameters</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-
 </project>
